@@ -28,18 +28,17 @@ import {ERC20Burnable, ERC20} from "lib/openzeppelin-contracts/contracts/token/E
 import {Ownable} from "lib/openzeppelin-contracts/contracts/access/Ownable.sol";
 
 /**
-    *@title DecentralizedStableCoin
-    *@author @HansP
-    *
-    *Collateral: wETH, wBTC
-    *Minting: Algorithmic
-    *Relative Stability: Pegged to 1$
-    *
-    *This is the contract menat to be governed by DSCEngine. This contract is just the ERC20
-    implementation of our stablecoin system.
-    *
-*/
-
+ * @title DecentralizedStableCoin
+ * @author @HansP
+ *
+ * Collateral: wETH, wBTC
+ * Minting: Algorithmic
+ * Relative Stability: Pegged to 1$
+ *
+ * This is the contract menat to be governed by DSCEngine. This contract is just the ERC20
+ *     implementation of our stablecoin system.
+ *
+ */
 contract DecentralizedStableCoin is ERC20Burnable, Ownable {
     error DecentralizedStableCoin__BurnAmountMustBeGreaterThanZero();
     error DecentralizedStableCoin__BurnAmountexceedsBalance();
